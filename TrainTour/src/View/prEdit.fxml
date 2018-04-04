@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0"
+	prefWidth="680.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+
+	<children>
+		<Label text="상품번호" layoutX="20.0" layoutY="20.0" />
+		<TextField fx:id="txtPrCode" layoutX="110.0" layoutY="16.5"
+			prefWidth="200.0" />
+		<Label text="여행명" layoutX="370.0" layoutY="20.0" />
+		<TextField fx:id="txtTourName" layoutX="450.0" layoutY="16.5"
+			prefWidth="200.0" />
+		<Label text="출발지" layoutX="27.5" layoutY="70.0" />
+		<TextField fx:id="txtStartPoint" promptText="예)영등포역"
+			layoutX="110.0" layoutY="66.5" prefWidth="200.0" />
+		<Label text="출발 날짜" layoutX="360.0" layoutY="70.0" />
+		<DatePicker fx:id="dpStartDate" layoutX="450.0" layoutY="66.5" />
+		<Label text="도착지" layoutX="27.5" layoutY="120.0" />
+		<TextField fx:id="txtEndPoint" promptText="예)부산역" layoutX="110.0"
+			layoutY="116.5" prefWidth="200.0" />
+		<Label text="도착 날짜" layoutX="360.0" layoutY="120.0" />
+		<DatePicker fx:id="dpEndDate" layoutX="450.0" layoutY="116.5" />
+		<Label text="복귀장소" layoutX="20.0" layoutY="170.0" />
+		<TextField fx:id="txtReturnPoint" promptText="예)용산역"
+			layoutX="110.0" layoutY="166.5" prefWidth="200.0" />
+		<Label text="복귀 날짜" layoutX="360.0" layoutY="170.0" />
+		<DatePicker fx:id="dpReturnDate" layoutX="450.0" layoutY="166.5" />
+		<Label text="호텔명" layoutX="27.5" layoutY="220.0" />
+		<TextField fx:id="txtHotelName" promptText="예)신라호텔" layoutX="110.0"
+			layoutY="216.5" prefWidth="200.0" />
+		<Label text="계절명" layoutX="370.0" layoutY="220.0" />
+		<TextField fx:id="txtSeason" promptText="예)봄,여름,가을,겨울"
+			layoutX="450.0" layoutY="216.5" prefWidth="200.0" />
+		<Label text="대인 요금" layoutX="20.0" layoutY="270.0" />
+		<TextField fx:id="txtAdultPrice" promptText="0" layoutX="110.0"
+			layoutY="266.5" prefWidth="150.0" alignment="CENTER_RIGHT" />
+		<Label text="원" layoutX="270.0" layoutY="270.0" />
+		<Label text="소인 요금" layoutX="360.0" layoutY="270.0" />
+		<TextField fx:id="txtChildPrice" promptText="0" layoutX="450.0"
+			layoutY="266.5" prefWidth="150.0" alignment="CENTER_RIGHT" />
+		<Label text="원" layoutX="610.0" layoutY="270.0" />
+
+		<Label text="최대 인원" layoutX="20.0" layoutY="320.0" />
+		<TextField fx:id="txtMaximum" promptText="0" layoutX="110.0"
+			layoutY="316.5" prefWidth="150.0" alignment="CENTER_RIGHT" />
+		<Label text="명" layoutX="270.0" layoutY="320.0" />
+		<Label text="최소 인원" layoutX="360.0" layoutY="320.0" />
+		<TextField fx:id="txtMinimum" promptText="0" layoutX="450.0"
+			layoutY="316.5" prefWidth="150.0" alignment="CENTER_RIGHT" />
+		<Label text="명" layoutX="610.0" layoutY="320.0" />
+		<Label text="여행일정" layoutX="20.0" layoutY="370.0" />
+		<TextArea fx:id="txtAreaSchedule" layoutX="110.0" layoutY="366.5"
+			prefWidth="540.0" prefHeight="250.0" />
+		<Button fx:id="btnPrRegist" text="등록" layoutX="290.0" layoutY="641.5" />
+		<Button fx:id="btnPrExit" text="종료" layoutX="355.0" layoutY="641.5" />
+		<Separator layoutX="10.0" layoutY="10.0" orientation="HORIZONTAL"
+			prefWidth="660.0" />
+		<Separator layoutX="10.0" layoutY="10.0" orientation="VERTICAL"
+			prefHeight="680.0" />
+		<Separator layoutX="10.0" layoutY="690.0" orientation="HORIZONTAL"
+			prefWidth="660.0" />
+		<Separator layoutX="670.0" layoutY="10.0" orientation="VERTICAL"
+			prefHeight="680.0" />
+		<Separator layoutX="10.0" layoutY="55.0" orientation="HORIZONTAL"
+			prefWidth="660.0" />
+		<Separator layoutX="10.0" layoutY="105.0" orientation="HORIZONTAL"
+			prefWidth="660.0" />
+		<Separator layoutX="10.0" layoutY="155.0" orientation="HORIZONTAL"
+			prefWidth="660.0" />
+		<Separator layoutX="10.0" layoutY="205.0" orientation="HORIZONTAL"
+			prefWidth="660.0" />
+		<Separator layoutX="10.0" layoutY="255.0" orientation="HORIZONTAL"
+			prefWidth="660.0" />
+		<Separator layoutX="10.0" layoutY="305.0" orientation="HORIZONTAL"
+			prefWidth="660.0" />
+		<Separator layoutX="10.0" layoutY="355.0" orientation="HORIZONTAL"
+			prefWidth="660.0" />
+		<Separator layoutX="335.0" layoutY="10.0" orientation="VERTICAL"
+			prefHeight="345.0" />
+
+	</children>
+
+	<!-- TODO Add Nodes -->
+</AnchorPane>
+

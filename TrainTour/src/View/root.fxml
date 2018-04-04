@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+	minWidth="-Infinity" prefHeight="900.0" prefWidth="970.0"
+	tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1"
+	xmlns="http://javafx.com/javafx/8" fx:controller="Controller.RootController">
+	<!-- TODO Add Nodes -->
+	<tabs>
+		<Tab text="예약고객관리">
+			<content>
+				<AnchorPane prefHeight="700.0" prefWidth="900.0">
+					<children>
+						<!--전체 크기틀 -->
+						<Label text="고객번호" layoutX="20.0" layoutY="20.0" />
+						<TextField fx:id="txtCusNo" layoutX="110.0" layoutY="16.5"
+							prefWidth="200.0" />
+						<Label text="상품코드" layoutX="360.0" layoutY="20.0" />
+						<TextField fx:id="txtProductCode" layoutX="450.0"
+							layoutY="16.5" prefWidth="200.0" />
+						<Button fx:id="btnCusPrSearch" layoutX="655.0" layoutY="16.5">
+							<graphic>
+								<ImageView>
+									<Image url="@/image/search.jpg" />
+								</ImageView>
+							</graphic>
+						</Button>
+						<Label text="  성 명" layoutX="20.0" layoutY="80.0" />
+						<TextField fx:id="txtCusName" promptText="이름을 입력하세요."
+							layoutX="110.0" layoutY="76.5" prefWidth="200.0" />
+						<Label text=" 휴대폰" layoutX="360.0" layoutY="80.0" />
+						<TextField fx:id="txtCusPhone" promptText="-제외하고 입력하세요."
+							layoutX="450.0" layoutY="76.5" prefWidth="200.0" />
+						<Label text="대인" layoutX="680.0" layoutY="80.0" />
+						<TextField fx:id="txtAdult" text="0" layoutX="720.0"
+							layoutY="76.5" prefWidth="40.0" alignment="CENTER_RIGHT" />
+						<Label text="명  /" layoutX="770.0" layoutY="80.0" />
+						<Label text="소인" layoutX="810.0" layoutY="80.0" />
+						<TextField fx:id="txtChild" text="0" layoutX="850.0"
+							layoutY="76.5" prefWidth="40.0" alignment="CENTER_RIGHT" />
+						<Label text="명" layoutX="900.0" layoutY="80.0" />
+						<Label text="  날 짜" layoutX="20.0" layoutY="140.0" />
+						<DatePicker fx:id="dpRegistDate" layoutX="110.0"
+							layoutY="136.5" />
+						<Label text="동승자 휴대폰" layoutX="350.0" layoutY="142.5">
+							<font>
+								<Font size="12.5" />
+							</font>
+						</Label>
+						<TextField fx:id="txtPessPhone" layoutX="450.0" layoutY="136.5"
+							prefWidth="200.0" promptText="-제외하고 입력하세요." />
+						<Label text="이메일" layoutX="675.0" layoutY="140.0" />
+						<TextField fx:id="txtEmail" layoutX="725.0" layoutY="136.5"
+							prefWidth="220.0" promptText="주소를 정확히 입력해주세요." />
+						<Label text="총 금액" layoutX="22.5" layoutY="200.0" />
+						<TextField fx:id="txtTotalPrice" text="0" layoutX="110.0"
+							layoutY="196.5" prefWidth="200.0" />
+						<Label text="환불계좌" layoutX="360.0" layoutY="200.0" />
+						<TextField fx:id="txtAccountNumber" layoutX="450.0"
+							layoutY="196.5" promptText="은행명 / 계좌번호로 적어주세요" prefWidth="300.0" />
+						<Button fx:id="btnCusCodeMax" text="고객번호" layoutX="215.0"
+							layoutY="276.5" />
+						<Button fx:id="btnCusTotalPrice" text="총금액" layoutX="310.0"
+							layoutY="276.5" />
+						<Button fx:id="btnCusReset" text="초기화" layoutX="390.0"
+							layoutY="276.5" />
+						<Button fx:id="btnCusEdit" text="수정" layoutX="470.0"
+							layoutY="276.5" />
+						<Button fx:id="btnCusDelete" text="삭제" layoutX="535.0"
+							layoutY="276.5" />
+						<Button fx:id="btnCusRegist" text="등록" layoutX="600.0"
+							layoutY="276.5" />
+						<Button fx:id="btnCusExit" text="종료" layoutX="665.0"
+							layoutY="276.5" />
+						<TextField fx:id="txtCusSearchPhone" promptText="휴대폰 번호"
+							layoutX="20.0" layoutY="356.5" prefWidth="130.0" />
+						<TextField fx:id="txtCusSearchName" promptText="고객 이름"
+							layoutX="160.0" layoutY="356.5" prefWidth="90.0" />
+						<Button fx:id="btnCusSearch" text="검색" layoutX="260.0"
+							layoutY="356.5" />
+						<Button fx:id="btnCusSearchTotal" text="전체보기" layoutX="320.0"
+							layoutY="356.5" />
+						<TableView fx:id="customerTableView" layoutX="10.0"
+							layoutY="392.5" prefWidth="480.0" prefHeight="450.0" />
+						<TableView fx:id="reservationTableView" layoutX="490.0"
+							layoutY="392.5" prefWidth="480.0" prefHeight="450.0" />
+						<Separator layoutX="10.0" layoutY="10.0" orientation="HORIZONTAL"
+							prefWidth="957" />
+						<Separator layoutX="10.0" layoutY="10.0" orientation="VERTICAL"
+							prefHeight="330.0" />
+						<Separator layoutX="967.0" layoutY="10.0" orientation="VERTICAL"
+							prefHeight="330.0" />
+						<Separator layoutX="10.0" layoutY="60.0" orientation="HORIZONTAL"
+							prefWidth="957" />
+						<Separator layoutX="10.0" layoutY="117.5" orientation="HORIZONTAL"
+							prefWidth="957" />
+						<Separator layoutX="10.0" layoutY="177.5" orientation="HORIZONTAL"
+							prefWidth="957" />
+						<Separator layoutX="10.0" layoutY="245.0" orientation="HORIZONTAL"
+							prefWidth="957" />
+						<Separator layoutX="10.0" layoutY="340.0" orientation="HORIZONTAL"
+							prefWidth="957" />
+						<Separator layoutX="335.0" layoutY="10.0" orientation="VERTICAL"
+							prefHeight="235.0" />
+						<Separator layoutX="662.5" layoutY="60.0" orientation="VERTICAL"
+							prefHeight="117.5" />
+					</children>
+				</AnchorPane>
+			</content>
+		</Tab>
+		<Tab text="상품등록 관리">
+			<content>
+				<AnchorPane prefHeight="700.0" prefWidth="900.0">
+					<children>
+						<Label text="상품번호" layoutX="20.0" layoutY="20.0" />
+						<TextField fx:id="txtPrCode" layoutX="110.0" layoutY="16.5"
+							prefWidth="200.0" />
+						<Label text="여행명" layoutX="370.0" layoutY="20.0" />
+						<TextField fx:id="txtTourName" layoutX="450.0" layoutY="16.5"
+							prefWidth="200.0" />
+						<Label text="출발지" layoutX="27.5" layoutY="70.0" />
+						<TextField fx:id="txtStartPoint" promptText="예)영등포역"
+							layoutX="110.0" layoutY="66.5" prefWidth="200.0" />
+						<Label text="출발 날짜" layoutX="360.0" layoutY="70.0" />
+						<DatePicker fx:id="dpStartDate" layoutX="450.0"
+							layoutY="66.5" />
+						<Label text="도착지" layoutX="27.5" layoutY="120.0" />
+						<TextField fx:id="txtEndPoint" promptText="예)부산역"
+							layoutX="110.0" layoutY="116.5" prefWidth="200.0" />
+						<Label text="도착 날짜" layoutX="360.0" layoutY="120.0" />
+						<DatePicker fx:id="dpEndDate" layoutX="450.0" layoutY="116.5" />
+						<Label text="복귀장소" layoutX="20.0" layoutY="170.0" />
+						<TextField fx:id="txtReturnPoint" promptText="예)용산역"
+							layoutX="110.0" layoutY="166.5" prefWidth="200.0" />
+						<Label text="복귀 날짜" layoutX="360.0" layoutY="170.0" />
+						<DatePicker fx:id="dpReturnDate" layoutX="450.0"
+							layoutY="166.5" />
+						<Label text="호텔명" layoutX="27.5" layoutY="220.0" />
+						<TextField fx:id="txtHotelName" promptText="예)신라호텔"
+							layoutX="110.0" layoutY="216.5" prefWidth="200.0" />
+						<Label text="대인 요금" layoutX="360.0" layoutY="220.0" />
+						<TextField fx:id="txtAdultPrice" promptText="0" layoutX="450.0"
+							layoutY="216.5" prefWidth="150.0" alignment="CENTER_RIGHT" />
+						<Label text="원" layoutX="610" layoutY="220.0" />
+						<Label text="소인 요금" layoutX="660.0" layoutY="220.0" />
+						<TextField fx:id="txtChildPrice" promptText="0" layoutX="750.0"
+							layoutY="216.5" prefWidth="150.0" alignment="CENTER_RIGHT" />
+						<Label text="원" layoutX="910" layoutY="220.0" />
+						<Label text="계절명" layoutX="27.5" layoutY="270.0" />
+						<TextField fx:id="txtSeason" promptText="예)봄" layoutX="110.0"
+							layoutY="266.5" prefWidth="200.0" />
+						<Label text="최대 인원" layoutX="360.0" layoutY="270.0" />
+						<TextField fx:id="txtMaximum" promptText="0" layoutX="450.0"
+							layoutY="266.5" prefWidth="150.0" alignment="CENTER_RIGHT" />
+						<Label text="명" layoutX="610" layoutY="266.5" />
+						<Label text="최소 인원" layoutX="660.0" layoutY="270.0" />
+						<TextField fx:id="txtMinimum" promptText="0" layoutX="750.0"
+							layoutY="266.5" prefWidth="150.0" alignment="CENTER_RIGHT" />
+						<Label text="명" layoutX="910" layoutY="266.5" />
+						<Label text="여행일정" layoutX="20.0" layoutY="320.0" />
+						<TextArea fx:id="txtAreaSchedule" layoutX="110.0"
+							layoutY="316.5" prefWidth="790.0" prefHeight="80.0" />
+						<Button fx:id="btnPrCodeMax" text="상품번호" layoutX="255.0"
+							layoutY="421.5" />
+						<Button fx:id="btnPrReset" text="초기화" layoutX="350.0"
+							layoutY="421.5" />
+						<Button fx:id="btnPrEdit" text="수정" layoutX="430.0"
+							layoutY="421.5" />
+						<Button fx:id="btnPrDelete" text="삭제" layoutX="495.0"
+							layoutY="421.5" />
+						<Button fx:id="btnPrRegist" text="등록" layoutX="560.0"
+							layoutY="421.5" />
+						<Button fx:id="btnPrExit" text="종료" layoutX="625.0"
+							layoutY="421.5" />
+
+						<TextField fx:id="txtPrSearchSeason" promptText="계절명"
+							layoutX="20.0" layoutY="471.5" prefWidth="130.0" />
+						<TextField fx:id="txtPrSearchPrCode" promptText="상품코드"
+							layoutX="160.0" layoutY="471.5" prefWidth="90.0" />
+						<DatePicker fx:id="dpPrSearchDate" layoutX="260.0"
+							layoutY="471.5" />
+						<Button fx:id="btnPrSearch" text="검색" layoutX="473.0"
+							layoutY="471.5" />
+						<Button fx:id="btnPrSearchTotal" text="전체보기" layoutX="533.0"
+							layoutY="471.5" />
+						<TableView fx:id="productTableView" layoutX="10.0"
+							layoutY="507.5" prefWidth="960.0" prefHeight="335.0" />
+
+						<Separator layoutX="10.0" layoutY="10.0" orientation="HORIZONTAL"
+							prefWidth="957" />
+						<Separator layoutX="10.0" layoutY="10.0" orientation="VERTICAL"
+							prefHeight="450.0" />
+						<Separator layoutX="967.0" layoutY="10.0" orientation="VERTICAL"
+							prefHeight="450.0" />
+						<Separator layoutX="10.0" layoutY="55.0" orientation="HORIZONTAL"
+							prefWidth="957" />
+						<Separator layoutX="10.0" layoutY="105.0" orientation="HORIZONTAL"
+							prefWidth="957" />
+						<Separator layoutX="10.0" layoutY="155.0" orientation="HORIZONTAL"
+							prefWidth="957" />
+						<Separator layoutX="10.0" layoutY="205.0" orientation="HORIZONTAL"
+							prefWidth="957" />
+						<Separator layoutX="10.0" layoutY="255.0" orientation="HORIZONTAL"
+							prefWidth="957" />
+						<Separator layoutX="10.0" layoutY="300.0" orientation="HORIZONTAL"
+							prefWidth="957" />
+						<Separator layoutX="10.0" layoutY="410.0" orientation="HORIZONTAL"
+							prefWidth="957" />
+						<Separator layoutX="10.0" layoutY="460.0" orientation="HORIZONTAL"
+							prefWidth="957" />
+						<Separator layoutX="335.0" layoutY="10.0" orientation="VERTICAL"
+							prefHeight="290.0" />
+						<Separator layoutX="640.0" layoutY="205.0" orientation="VERTICAL"
+							prefHeight="95.0" />
+
+					</children>
+				</AnchorPane>
+			</content>
+
+		</Tab>
+		<Tab text="매출관리">
+			<content>
+				<AnchorPane prefHeight="700.0" prefWidth="900.0">
+					<children>
+						<TextField fx:id="txtSalesSearchPrCode" promptText="코드명"
+							layoutX="20.0" layoutY="26.5" prefWidth="90.0" />
+						<Button fx:id="btnSalesSearch" text="검색" layoutX="120.0"
+							layoutY="26.5" />
+						<Button fx:id="btnSalesSearchTotal" text="전체보기" layoutX="180.0"
+							layoutY="26.5" />
+						<TableView fx:id="salesTableView" layoutX="10.0"
+							layoutY="62.5" prefWidth="960.0" prefHeight="780.0" />
+						
+						<Button fx:id="btnSaveFileDir" text="저장 폴더 선택" layoutX="270.0"
+							layoutY="26.5" />
+						<TextField fx:id="txtSaveFileDir" promptText="폴더를 선택하세요."
+							layoutX="400.0" layoutY="26.5" prefWidth="200.0" />
+						<Button fx:id="btnExcel" text="엑셀파일" layoutX="610.0"
+							layoutY="26.5" />
+						<Button fx:id="btnPDF" text="PDF파일" layoutX="700.0"
+							layoutY="26.5" />
+						<Button fx:id="btnBarChart" text="차트보기" layoutX="785.0"
+							layoutY="26.5" />
+					</children>
+				</AnchorPane>
+			</content>
+
+		</Tab>
+	</tabs>
+</TabPane>
+

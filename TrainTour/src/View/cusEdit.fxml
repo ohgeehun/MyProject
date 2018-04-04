@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.Separator?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0"
+	prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+	<children>
+		<Label text="고객번호" layoutX="20.0" layoutY="20.0" />
+		<TextField fx:id="txtCusNo" layoutX="110.0" layoutY="16.5"
+			prefWidth="200.0" />
+		<Label text="상품코드" layoutX="360.0" layoutY="20.0" />
+		<TextField fx:id="txtProductCode" layoutX="450.0" layoutY="16.5"
+			prefWidth="200.0" />
+		<Button fx:id="btnCusPrSearch" layoutX="655.0" layoutY="16.5">
+			<graphic>
+				<ImageView>
+					<Image url="@/image/search.jpg" />
+				</ImageView>
+			</graphic>
+		</Button>
+		<Label text="  성 명" layoutX="20.0" layoutY="80.0" />
+		<TextField fx:id="txtCusName" promptText="이름을 입력하세요."
+			layoutX="110.0" layoutY="76.5" prefWidth="200.0" />
+		<Label text="대인" layoutX="360.0" layoutY="80.0" />
+		<TextField fx:id="txtAdult" layoutX="400.0" layoutY="76.5"
+			prefWidth="40.0" alignment="CENTER_RIGHT" />
+		<Label text="명  /" layoutX="450.0" layoutY="80.0" />
+		<Label text="소인" layoutX="490.0" layoutY="80.0" />
+		<TextField fx:id="txtChild" layoutX="530.0" layoutY="76.5"
+			prefWidth="40.0" alignment="CENTER_RIGHT" />
+		<Label text="명" layoutX="580.0" layoutY="80.0" />
+		<Label text=" 휴대폰" layoutX="20.0" layoutY="140.0" />
+		<TextField fx:id="txtCusPhone" promptText="-제외하고 입력하세요."
+			layoutX="110.0" layoutY="136.5" prefWidth="200.0" />
+		<Label text="동승자 휴대폰" layoutX="350.0" layoutY="142.5">
+			<font>
+				<Font size="12.5" />
+			</font>
+		</Label>
+		<TextField fx:id="txtPessPhone" layoutX="450.0" layoutY="136.5"
+			prefWidth="200.0" promptText="-제외하고 입력하세요." />
+		<Label text="  날 짜" layoutX="20.0" layoutY="200.0" />
+		<DatePicker fx:id="dpRegistDate" layoutX="110.0" layoutY="196.5" />
+		<Label text="이메일" layoutX="360.0" layoutY="200.0" />
+		<TextField fx:id="txtEmail" layoutX="450.0" layoutY="196.5"
+			prefWidth="220.0" promptText="주소를 정확히 입력해주세요." />
+		<Label text="환불계좌" layoutX="20.0" layoutY="260.0" />
+		<TextField fx:id="txtAccountNumber" layoutX="110.0" layoutY="256.5"
+			promptText="은행명 / 계좌번호로 적어주세요" prefWidth="300.0" />
+		<Label text="총 금액" layoutX="22.5" layoutY="320.0" alignment="CENTER_RIGHT" />
+		<TextField fx:id="txtTotalPrice" layoutX="110.0" layoutY="316.5"
+			prefWidth="200.0" />
+		<Button fx:id="btnCusTotalPrice" text="총금액" layoutX="270.0"
+			layoutY="376.5" />
+		<Button fx:id="btnCusRegist" text="등록" layoutX="347.5" layoutY="376.5" />
+		<Button fx:id="btnCusExit" text="종료" layoutX="409.0" layoutY="376.5" />
+		<Separator layoutX="10.0" layoutY="10.0" orientation="HORIZONTAL"
+			prefWidth="690.0" />
+		<Separator layoutX="10.0" layoutY="10.0" orientation="VERTICAL"
+			prefHeight="420.0" />
+		<Separator layoutX="10.0" layoutY="430.0" orientation="HORIZONTAL"
+			prefWidth="690.0" />
+		<Separator layoutX="700.0" layoutY="10.0" orientation="VERTICAL"
+			prefHeight="420.0" />
+		<Separator layoutX="10.0" layoutY="60.0" orientation="HORIZONTAL"
+			prefWidth="690.0" />
+		<Separator layoutX="10.0" layoutY="120.0" orientation="HORIZONTAL"
+			prefWidth="690.0" />
+		<Separator layoutX="10.0" layoutY="180.0" orientation="HORIZONTAL"
+			prefWidth="690.0" />
+		<Separator layoutX="10.0" layoutY="240.0" orientation="HORIZONTAL"
+			prefWidth="690.0" />
+		<Separator layoutX="10.0" layoutY="300.0" orientation="HORIZONTAL"
+			prefWidth="690.0" />
+		<Separator layoutX="10.0" layoutY="360.0" orientation="HORIZONTAL"
+			prefWidth="690.0" />
+		<Separator layoutX="340.0" layoutY="10.0" orientation="VERTICAL"
+			prefHeight="230.0" />
+
+	</children>
+	<!-- TODO Add Nodes -->
+</AnchorPane>
+
